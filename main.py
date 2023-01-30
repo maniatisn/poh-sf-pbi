@@ -22,9 +22,8 @@ USERNAME = os.environ['SF_USERNAME']
 PASSWORD = os.environ['SF_PASSWORD']
 SECURITY_TOKEN = os.environ['SF_SECURITY_TOKEN']
 
-print(USERNAME)
-print(PASSWORD)
-print(SECURITY_TOKEN)
+for i in USERNAME:
+    print(i)
 
 # authenticate via salesforce
 sf = Salesforce(username=USERNAME, password=PASSWORD,
