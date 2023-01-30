@@ -18,12 +18,9 @@ def query_to_pandas(query):
 
 
 # get credentials from github actions secrets
-USERNAME = os.environ['SF_USERNAME']
-PASSWORD = os.environ['SF_PASSWORD']
-SECURITY_TOKEN = os.environ['SF_SECURITY_TOKEN']
-
-for i in USERNAME:
-    print(i)
+USERNAME = os.environ['SF_USERNAME'][1:]
+PASSWORD = os.environ['SF_PASSWORD'][1:]
+SECURITY_TOKEN = os.environ['SF_SECURITY_TOKEN'][1:]
 
 # authenticate via salesforce
 sf = Salesforce(username=USERNAME, password=PASSWORD,
